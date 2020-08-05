@@ -1,4 +1,12 @@
-<th scope="row">{{ bookTitle}}</th>
+<th scope="row">{{ bookId }}</th>
+<td>{{ bookTitle }}</td>
 <td>{{ bookAuthor }}</td>
 <td>{{ bookStatus }}</td>
+<td>
+  <button
+    class="btn badge-dark m-2"
+    (click)="onClickSwichBookStatus()">
+    Switcher vers {{ nextStatus }}
+  </button>
+</td>
 

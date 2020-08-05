@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import {BookService} from './services/Book/book.service';
 import { TableComponent } from './components/table/table.component';
 import { TableLineComponent } from './components/table-line/table-line.component';
+import { AuthViewComponent } from './views/auth-view/auth-view.component';
+import { BooksViewComponent } from './views/books-view/books-view.component';
+import {AuthService} from './services/Auth/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    TableLineComponent
+    TableLineComponent,
+    AuthViewComponent,
+    BooksViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [BookService],
+  providers: [AuthService, BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

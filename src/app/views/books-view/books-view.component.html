@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <h1>Book Manager !</h1>
+</div>
+
+<div class="container d-flex align-content-center">
+  <button class="btn btn-dark m-1"
+          (click)="onClickSwitchAllBooksStatus('dispo')">
+    Passer tous à 'dispo'
+  </button>
+  <button class="btn btn-dark m-1"
+          (click)="onClickSwitchAllBooksStatus('non dispo')">
+    Passer tous à 'non dispo'
+  </button>
+</div>
+
+<hr>
+
+<app-table></app-table>

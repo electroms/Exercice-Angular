@@ -12,9 +12,10 @@ export class BookService {
 
     for (let i = 0; i < 10; i++) {
       this.books.push({
+        id: i,
         title: 'Title ' + i,
         author: 'Author ' + i,
-        status: 'dispo '
+        status: 'dispo'
       });
     }
 
@@ -26,6 +27,15 @@ export class BookService {
    */
   switchAllBooksStatus(newStatus: string): void {
     this.books.forEach(book => book.status = newStatus);
+  }
+
+  switchBookStatus(bookId: number, newStatus: string): void {
+    for (let book of this.books) {
+      if (book.id === bookId) {
+        book.status = newStatus;
+        break;
+      }
+    }
   }
 
 }

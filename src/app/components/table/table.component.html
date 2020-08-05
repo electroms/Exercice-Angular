@@ -2,14 +2,17 @@
   <table class="table">
     <thead class="thead-dark">
     <tr>
+      <th scope="col">Id</th>
       <th scope="col">Titre</th>
       <th scope="col">Auteur</th>
       <th scope="col">Statut</th>
+      <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
     <tr app-table-line
         *ngFor="let book of books"
+        [bookId]="book.id"
         [bookTitle]="book.title"
         [bookAuthor]="book.author"
         [bookStatus]="book.status"
